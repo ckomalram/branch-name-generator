@@ -21,8 +21,12 @@ def generate_branch_name(ticket_number, desc):
         "Commit for prod hotfix Bug": f"fix:[PATCH][{ticket_number}]-{normalized_desc}",
     }
 
+    return options
+
+def print_branches(options: dict):
     for key, value in options.items():
         print(f"{key}:\n {value}")
+
 
 def generate_normalize_desc(desc):
     normalized_desc = desc.lower().replace(' ', '-').replace('á', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u')
@@ -42,6 +46,8 @@ def run():
     create_parse.add_argument('-d', '--description', required=True, help="description of ticket")
     args = parser.parse_args()
 
-    generate_branch_name(args.ticket,args.description)
+    result = generate_branch_name(args.ticket,args.description)
+    print_branches(result)
+
 if __name__ == "__main__":
     run()

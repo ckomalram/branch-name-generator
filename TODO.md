@@ -1,7 +1,6 @@
 # Tareas del proyecto
 
 ## TODO
-2- Crear proyecto en FastAPI / Flask.
 3- Crear uni tests BE
 4- Crear proyecto FE en React-js.
 5- Implementar BE en FE.
@@ -14,4 +13,5 @@
 
 # DONE 
 1- Crear proyecto en modo CLI.
+2- Crear proyecto en FastAPI / Flask.
 
